@@ -1,121 +1,95 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Landing Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Neon hover effect */
-        .hover-neon {
-            transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
-        }
-        .hover-neon:hover {
-            box-shadow: 0 0 6px rgba(255, 255, 0, 0.5);
-            transform: scale(1.01);
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Neon hover effect */
+    .hover-neon {
+      transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+    .hover-neon:hover {
+      box-shadow: 0 0 3px rgba(255, 255, 0, 0.3);
+      transform: scale(1.02);
+    }
 
-        /* Popup effect */
-        .popup-container {
-            position: relative;
-            overflow: hidden;
-        }
-        .popup-info {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            color: yellow;
-            padding: 10px;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: opacity 0.4s ease-in-out, transform 0.4s ease-in-out;
-        }
-        .popup-container:hover .popup-info {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    /* Popup effect */
+    .popup-container {
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease-in-out;
+    }
+    .popup-container:hover {
+      transform: scale(1.05);
+    }
 
-        /* Link hover effect */
-        .hover-link {
-            transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
-            padding: 4px 8px;
-            border-radius: 5px;
-        }
-        .hover-link:hover {
-            color: #00FFFF;
-            transform: scale(1.05);
-        }
+    /* Button hover effect */
+    .btn-hover {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    .btn-hover:hover {
+      transform: scale(1.08);
+      box-shadow: 0 0 6px rgba(255, 255, 0, 0.6);
+    }
 
-        /* Authentication container styling */
-        .auth-container {
-            background: rgba(0, 0, 0, 0.6);
-            padding: 10px;
-            border-radius: 6px;
-            text-align: center;
-        }
-    </style>
+    /* Auth button hover effect */
+    .hover-link {
+      transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+    .hover-link:hover {
+      color: #00FFFF;
+      transform: scale(1.05);
+    }
+  </style>
 </head>
 <body class="bg-black text-yellow-400">
-    <header class="flex justify-between items-center p-4 bg-transparent text-blue-400">
-        <img src="logo.png" alt="Logo" class="w-16 h-16 object-contain">
-        
-        <!-- Navigation menu -->
-        <div class="hidden md:block">
-            <nav aria-label="Global">
-              <ul class="flex items-center gap-6 text-sm">
-                <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> About </a></li>
-                <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Careers </a></li>
-                <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> History </a></li>
-                <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Services </a></li>
-                <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Projects </a></li>
-                <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a></li>
-              </ul>
-            </nav>
-        </div>
-
-        <!-- Authentication links -->
-        <div class="flex items-center space-x-4 auth-container">
-            <a href="#" class="text-blue-400 hover-link">Log In</a>
-            <a href="#" class="border border-blue-400 text-blue-400 px-4 py-2 rounded hover-link">Register</a>
-        </div>
-    </header>
-    
-    <!-- Main section -->
-    <section class="pt-20 p-12 text-center pb-8">
-        <h3 class="text-2xl font-bold text-yellow-400 mb-8">Koleksi Jersey Vintage Real Madrid FC</h3>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <!-- Jersey card 1 -->
-            <div class="border border-yellow-400 p-4 rounded shadow-lg bg-gray-900 hover-neon popup-container">
-                <img src="1.png" alt="Jersey Home" class="w-full h-48 object-cover mb-2">
-                <h4 class="text-xl font-semibold text-white">Jersey third 1996</h4>
-                <p class="text-yellow-400">Rp 799.000</p>
-                <button class="mt-2 bg-yellow-400 text-black px-4 py-2 rounded">Beli Sekarang</button>
-            </div>
-            
-            <!-- Jersey card 2 -->
-            <div class="border border-yellow-400 p-4 rounded shadow-lg bg-gray-900 hover-neon popup-container">
-                <img src="2.png" alt="Jersey Away" class="w-full h-48 object-cover mb-2">
-                <h4 class="text-xl font-semibold text-white">Jersey Retro 1986</h4>
-                <p class="text-yellow-400">Rp 799.000</p>
-                <button class="mt-2 bg-yellow-400 text-black px-4 py-2 rounded">Beli Sekarang</button>
-            </div>
-            
-            <!-- Jersey card 3 -->
-            <div class="border border-yellow-400 p-4 rounded shadow-lg bg-gray-900 hover-neon popup-container">
-                <img src="4.png" alt="Jersey Third" class="w-full h-48 object-cover mb-2">
-                <h4 class="text-xl font-semibold text-white">Jersey Home 2005</h4>
-                <p class="text-yellow-400">Rp 799.000</p>
-                <button class="mt-2 bg-yellow-400 text-black px-4 py-2 rounded">Beli Sekarang</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="p-6 bg-gray-900 text-yellow-400 mt-8 flex justify-center space-x-8">
-        <p>Instagram: <a href="https://www.instagram.com/yahyafahmiabdillah" class="text-blue-400">yahyafahmiabdillah</a></p>
-        <p>Gmail: <a href="mailto:fahmiyaya08@gmail.com" class="text-blue-400">fahmiyaya08@gmail.com</a></p>
-    </footer>
+  <header class="flex justify-between items-center p-4 bg-transparent text-blue-400">
+    <img src="logo.png" alt="Logo" class="w-16 h-16 object-contain">
+    <div class="hidden md:block">
+      <nav aria-label="Global">
+        <ul class="flex items-center gap-6 text-sm">
+          <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> About </a></li>
+          <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Careers </a></li>
+          <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> History </a></li>
+          <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Services </a></li>
+          <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Projects </a></li>
+          <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="flex items-center space-x-4 auth-container">
+      <a href="#" class="text-blue-400 hover-link">Log In</a>
+      <a href="#" class="border border-blue-400 text-blue-400 px-4 py-2 rounded hover-link">Register</a>
+    </div>
+  </header>
+  <section class="pt-20 p-12 text-center pb-8">
+    <h3 class="text-2xl font-bold text-yellow-400 mb-8">Koleksi Jersey Vintage Real Madrid FC</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="border border-yellow-400 p-4 rounded shadow-lg bg-gray-900 hover-neon popup-container">
+        <img src="1.png" alt="Jersey Home" class="w-full h-48 object-cover mb-2">
+        <h4 class="text-xl font-semibold text-white">Jersey third 1996</h4>
+        <p class="text-yellow-400">Rp 799.000</p>
+        <button class="mt-2 bg-yellow-400 text-black px-4 py-2 rounded btn-hover">Beli Sekarang</button>
+      </div>
+      <div class="border border-yellow-400 p-4 rounded shadow-lg bg-gray-900 hover-neon popup-container">
+        <img src="2.png" alt="Jersey Away" class="w-full h-48 object-cover mb-2">
+        <h4 class="text-xl font-semibold text-white">Jersey Retro 1986</h4>
+        <p class="text-yellow-400">Rp 799.000</p>
+        <button class="mt-2 bg-yellow-400 text-black px-4 py-2 rounded btn-hover">Beli Sekarang</button>
+      </div>
+      <div class="border border-yellow-400 p-4 rounded shadow-lg bg-gray-900 hover-neon popup-container">
+        <img src="4.png" alt="Jersey Third" class="w-full h-48 object-cover mb-2">
+        <h4 class="text-xl font-semibold text-white">Jersey Home 2005</h4>
+        <p class="text-yellow-400">Rp 799.000</p>
+        <button class="mt-2 bg-yellow-400 text-black px-4 py-2 rounded btn-hover">Beli Sekarang</button>
+      </div>
+    </div>
+  </section>
+  <footer class="p-6 bg-gray-900 text-yellow-400 mt-8 flex justify-center space-x-8">
+    <p>Instagram: <a href="https://www.instagram.com/yahyafahmiabdillah" class="text-blue-400">yahyafahmiabdillah</a></p>
+    <p>Gmail: <a href="mailto:fahmiyaya08@gmail.com" class="text-blue-400">fahmiyaya08@gmail.com</a></p>
+  </footer>
 </body>
 </html>
