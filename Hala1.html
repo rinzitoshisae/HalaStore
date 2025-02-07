@@ -6,6 +6,10 @@
   <title>Landing Page</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
+    body {
+      background: url('mdrd2.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
     /* Neon hover effect */
     .hover-neon {
       transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -14,7 +18,6 @@
       box-shadow: 0 0 3px rgba(255, 255, 0, 0.3);
       transform: scale(1.02);
     }
-
     /* Popup effect */
     .popup-container {
       position: relative;
@@ -24,7 +27,6 @@
     .popup-container:hover {
       transform: scale(1.05);
     }
-
     /* Button hover effect */
     .btn-hover {
       transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -33,7 +35,6 @@
       transform: scale(1.08);
       box-shadow: 0 0 6px rgba(255, 255, 0, 0.6);
     }
-
     /* Auth button hover effect */
     .hover-link {
       transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
@@ -87,9 +88,9 @@
       </div>
     </div>
   </section>
-  <footer class="p-6 bg-gray-900 text-yellow-400 mt-8 flex justify-center space-x-8">
-    <p>Instagram: <a href="https://www.instagram.com/yahyafahmiabdillah" class="text-blue-400">yahyafahmiabdillah</a></p>
-    <p>Gmail: <a href="mailto:fahmiyaya08@gmail.com" class="text-blue-400">fahmiyaya08@gmail.com</a></p>
+  <footer class="p-6 mt-8 flex justify-center space-x-8 bg-transparent">
+    <p>Instagram: <a href="https://www.instagram.com/yahyafahmiabdillah" class="text-white hover:text-gray-200 transition duration-200">yahyafahmiabdillah</a></p>
+    <p>Gmail: <a href="mailto:fahmiyaya08@gmail.com" class="text-white hover:text-gray-200 transition duration-200">fahmiyaya08@gmail.com</a></p>
   </footer>
 </body>
 </html>
