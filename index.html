@@ -1,57 +1,140 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>HalaStore - Tempat Baju Keren</title>
-   <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" href="logo.png">
-   <style>
-      .neon-hover:hover {
-        box-shadow: 0 0 8px rgba(0, 255, 255, 0.6), 0 0 16px rgba(0, 255, 255, 0.4);
-        transition: box-shadow 0.3s ease-in-out;
-      }
-      .video-bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        z-index: -1;
-      }
-   </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="icon" type="image/png" href="logo.png">
+  <style>
+    
+    /* Button hover effect tombol LOGIN */
+    .hover-link {
+      transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+    /* Button hover effect tombol LOGIN */
+    .hover-link:hover {
+      color: #00FFFF;
+      transform: scale(1.05);
+    }
+    
+    /* Neon hover effect border konten */
+    .hover-neon { 
+      transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+    }
+    /* Popup effect border konten */
+    .popup-container:hover {
+      transform: scale(1.05);
+    }
+
+    /* Button hover effect tombol beli */
+    .btn-hover {
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+    /* Button hover effect tombol beli */
+    .btn-hover:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 6px rgba(238, 255, 0, 0.6);
+    }
+
+    /* Neon hover effect */
+    .neon-hover:hover {
+      box-shadow: 0 0 8px rgba(0, 255, 255, 0.6), 0 0 16px rgba(0, 255, 255, 0.4);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+    .video-bg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+  </style>
 </head>
-<body>
-<section class="relative w-full h-screen overflow-hidden">
-  <video autoplay loop muted class="video-bg">
-    <source src="videomdrd.mp4" type="video/mp4">
-  </video>
+<body class="bg-black text-yellow-400">
+  <!-- Video Background Section -->
+  <section class="relative w-full h-screen overflow-hidden">
+    <video autoplay loop muted class="video-bg">
+      <source src="videomdrd.mp4" type="video/mp4">
+    </video>
 
-  <div class="absolute inset-0 bg-gray-900/75"></div>
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
 
-  <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:justify-center lg:px-8">
-    <div class="max-w-xl text-center">
-      <h1 class="text-3xl font-extrabold text-white sm:text-5xl">
-        Cari Outfit Kerenmu di
-        <strong class="block font-extrabold text-sky-300"> HalaStore! </strong>
-      </h1>
+    <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:justify-center lg:px-8">
+      <div class="max-w-xl text-center">
+        <h1 class="text-3xl font-extrabold text-white sm:text-5xl">
+          Cari Baju Kerenmu di
+          <strong class="block font-extrabold text-sky-300">HalaStore!</strong>
+        </h1>
+        <p class="mt-4 max-w-lg text-white sm:text-xl/relaxed mx-auto">
+          Mau baju kece dengan harga bersahabat? Di HalaStore aja! Pilihan banyak, harga hemat, kualitas mantap!
+        </p>
 
-      <p class="mt-4 max-w-lg text-white sm:text-xl/relaxed mx-auto">
-        Mau baju kece dengan harga bersahabat? Di HalaStore aja! Pilihan banyak, harga hemat, kualitas mantap!
-      </p>
-
-      <div class="mt-8 flex flex-wrap justify-center gap-4 text-center">
-        <a href="Hala1.html" class="block w-full rounded-sm bg-sky-300 px-12 py-3 text-sm font-medium text-white shadow-sm hover:bg-sky-400 neon-hover sm:w-auto">
-          Belanja Sekarang
-        </a>
-
-        <a href="About.html" class="block w-full rounded-sm bg-white px-12 py-3 text-sm font-medium text-sky-300 shadow-sm hover:text-sky-400 neon-hover sm:w-auto">
-          About
-        </a>
+        <div class="mt-8 flex flex-wrap justify-center gap-4 text-center">
+          <a href="#produk" class="block w-full rounded-sm bg-sky-300 px-12 py-3 text-sm font-medium text-white shadow-sm hover:bg-sky-400 neon-hover sm:w-auto">
+            Belanja Sekarang
+          </a>
+          <a href="About.html" class="block w-full rounded-sm bg-white px-12 py-3 text-sm font-medium text-sky-300 shadow-sm hover:text-sky-400 neon-hover sm:w-auto">
+            Males
+          </a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  <header class="flex justify-between items-center p-4 bg-transparent text-blue-400">
+    <img src="logo.png" alt="Logo" class="w-16 h-16 object-contain">
+    <div class="hidden md:block">
+      <nav aria-label="Global">
+        <ul class="flex items-center justify-center gap-6 text-sm"> 
+          <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> About </a></li>
+          <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Careers </a></li>
+          <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> History </a></li>
+          <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Services </a></li>
+          <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Projects </a></li>
+          <li><a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="flex items-center space-x-4">
+      <a href="#" class="text-blue-400 hover-link">Log In</a>
+      <a href="#" class="border border-blue-400 text-blue-400 px-4 py-2 rounded hover-link">Register</a>
+    </div>
+</header>
+
+  <section id="produk" class="pt-20 p-12 text-center">
+    <h3 class="text-2xl font-bold text-yellow-400 mb-8">Koleksi Jersey Vintage Real Madrid FC</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="border border-yellow-400 p-1 lg:p-9 rounded shadow-lg bg-gray-900 hover-neon popup-container">
+        <img src="1.png" alt="Jersey Home" class="w-full h-auto object-contain mb-2">
+        <h4 class="text-xl font-semibold text-white">Jersey third 1996</h4>
+        <p class="text-yellow-400">Rp 491.000</p>
+        <button class="bg-yellow-400 text-black px-4 py-2 rounded btn-hover mt-2">Beli Sekarang</button>
+      </div>
+      <div class="border border-yellow-400 p-1 lg:p-9 rounded shadow-lg bg-gray-900 hover-neon popup-container">
+        <img src="2.png" alt="Jersey Away" class="w-full h-auto object-contain mb-2">
+        <h4 class="text-xl font-semibold text-white">Jersey Retro 1986</h4>
+        <p class="text-yellow-400">Rp 342.000</p>
+        <button class="bg-yellow-400 text-black px-4 py-2 rounded btn-hover mt-2">Beli Sekarang</button>
+      </div>
+      <div class="border border-yellow-400 p-1 lg:p-9 rounded shadow-lg bg-gray-900 hover-neon popup-container">
+        <img src="4.png" alt="Jersey Third" class="w-full h-auto object-contain mb-2">
+        <h4 class="text-xl font-semibold text-white">Jersey Home 2005</h4>
+        <p class="text-yellow-400">Rp 453.000</p>
+        <button class="bg-yellow-400 text-black px-4 py-2 rounded btn-hover mt-2">Beli Sekarang</button>
+      </div>
+    </div>
+  </section>
+
+  <footer class="p-6 text-blue-600 mt-8 flex flex-col items-center space-y-2 bg-transparent relative">
+    <div class="flex space-x-8">
+      <p>Instagram: <a href="https://www.instagram.com/yahyafahmiabdillah" class="text-blue-500">@yahyafahmiabdillah</a></p>
+      <p class="text-sm text-blue-500">© 2024 HalaStore. All Rights Reserved.</p>
+      <p>Gmail: <a href="mailto:fahmiyaya08@gmail.com" class="text-blue-500">fahmiyaya08@gmail.com</a></p>
+    </div>
+    <img src="Mdrd2.jpg" alt="Halaa" class="absolute bottom-0 right-0 w-32 h-auto" style="margin: 10px;"> <!-- Gambar di pojok bawah -->
+</footer>
 </body>
 </html>
